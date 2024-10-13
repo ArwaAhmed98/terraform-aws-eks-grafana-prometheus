@@ -34,7 +34,11 @@ variable "mod_dependency" {
 }
 
 # Prometheus
-
+variable "svc_type" {
+type        = string
+default     = "NodePort"
+description = "Prometheus Helm svc type"
+}
 variable "settings_prometheus" {
   default = {
     alertmanager = {
